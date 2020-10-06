@@ -1,5 +1,6 @@
 #!/usr/bin/env Rscript
 
+
 # Helper script to create recipes for CRAN R packages to submit to conda-forge.
 #
 # Setup checklist:
@@ -14,6 +15,9 @@
 # conda, conda-build 3, R, stringr
 
 # Setup checks -----------------------------------------------------------------
+
+# set this to override the non-conda R installation
+.libPaths("/Users/pdiakumis/my_apps/miniconda/envs/cbuild/lib/R/library")
 
 if (!require("stringr", quietly = TRUE)) {
   stop("Please install the R package stringr to use the helper script",
