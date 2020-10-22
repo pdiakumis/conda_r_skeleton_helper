@@ -15,6 +15,8 @@
 
 # Setup checks -----------------------------------------------------------------
 
+.libPaths(.libPaths()[2])
+
 if (!require("stringr", quietly = TRUE)) {
   stop("Please install the R package stringr to use the helper script",
        "\nRun: install.packages(\"stringr\")")
